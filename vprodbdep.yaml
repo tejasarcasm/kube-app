@@ -62,7 +62,7 @@ spec:
 
       nodeSelector:
 
-        zone: us-east-1b
+        zone: us-east-1a
 
       volumes:
 
@@ -76,7 +76,7 @@ spec:
 
       initContainers:
         - name: busybox
-          image: busybox:latest
+          image: busybox
           args: ["rm", "-rf", "/var/lib/mysql/lost+found"]
           volumeMounts:
             - mountPath: /var/lib/mysql
