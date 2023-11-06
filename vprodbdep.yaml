@@ -34,7 +34,7 @@ spec:
 
         - name: vproob
 
-          image: tejasarcasm/vprofiledb
+          image: tejasarcasm/vprofiledb:latest
 
           volumeMounts:
 
@@ -73,3 +73,11 @@ spec:
             volumeID: vol-0a7e97b62d999763b
 
             fsType: ext4
+
+      initContainers:
+        - name: busybox
+          image: busybox:latest
+          args: ["rm", "-rf", "/var/lib/mysql/lost+found"]
+          volumeMounts:
+            - mountPath: /var/lib/mysql
+              name: vpro-db-data
