@@ -34,7 +34,7 @@ spec:
 
         - name: vproob
 
-          image: vprofile/vprofiledb
+          image: tejasarcasm/vprofiledb
 
           volumeMounts:
 
@@ -70,6 +70,6 @@ spec:
 
           awsElasticBlockStore:
 
-            volumeID: vol-0a077c13e0ef77ab9
+            volumeID: vol-0a7e97b62d999763b
 
             fsType: ext4
