@@ -62,7 +62,7 @@ spec:
 
       nodeSelector:
 
-        zone: us-east-1b
+        zone: us-east-1
 
       volumes:
 
