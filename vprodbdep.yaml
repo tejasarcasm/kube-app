@@ -41,8 +41,8 @@ spec:
           image: busybox:latest
           args: ["rm", "-rf", "/var/lib/mysql/lost+found"]
           volumeMounts:
-            - mountPath: vpro-db-data
-              name: /var/lib/mysql
+              - name: /var/lib/mysql
+                mountPath: vpro-db-data
 
 
 
